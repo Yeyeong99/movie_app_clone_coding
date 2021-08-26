@@ -10,7 +10,6 @@ function App() {
       <Food fav="kkkk" />
       <Food fav="what" />
       <Food fav="sleep tight" />
-      <Food fav="galaxy" />
     </div>
   );
 }
