@@ -15,3 +15,28 @@
 ```
 
 - import React from "react"를 작성하지 않으면 component를 인식하지 못함
+
+## 2. Props
+
+-Component에 부여할 수 있는 속성
+
+```javascript
+import React from "react";
+
+function Food({ fav }) {
+  return <h1>{fav}</h1>;
+}
+function App() {
+  return (
+    <div className="App">
+      <Food fav="kimchi" />
+    </div>
+  );
+}
+
+export default App;
+```
+
+- Food에 argument를 {} 없이 넘겨버리면 Component에 부여된 모든 Props을 객체의 형태로 반환함.
+  - 이땐 예를 들어 괄호에 props라고 작성했으면 출력시엔 props.fav 이런 식으로 작성해야함.
+- Props 중에서 특정한 것만 출력하고 싶은 경우 {}를 사용
