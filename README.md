@@ -40,3 +40,19 @@ export default App;
 - Food에 argument를 {} 없이 넘겨버리면 Component에 부여된 모든 Props을 객체의 형태로 반환함.
   - 이땐 예를 들어 괄호에 props라고 작성했으면 출력시엔 props.fav 이런 식으로 작성해야함.
 - Props 중에서 특정한 것만 출력하고 싶은 경우 {}를 사용해 직접 추출
+
+## 3. Dynamic Component Generation
+
+```javascript
+function App() {
+  return (
+    <div className="App">
+      {foodILike.map((dish) => (
+        <Food name={dish.name} id={dish.id} />
+      ))}
+    </div>
+  );
+}
+```
+
+- map: array의 각 item에서 function을 실행하고 그 function의 result를 array로 반환해줌.
