@@ -77,3 +77,28 @@ props의 데이터형과 필수인지를 설정할 수 있음
 - 동적 데이터 관리
 - react는 자동적으로 class component의 render method를 실행
 - class <-> state
+
+```javascript
+add = () => {
+  this.setState({ count: 1 }); // state를 refresh
+};
+minus = () => {
+  this.setState({ count: -1 });
+};
+```
+
+- state는 object
+- react는 render를 refresh 하지 않음
+- 그래서 setState 사용, 여기엔 새로운 object(state)를 넘겨줘야함.
+
+```javascript
+add = () => {
+  this.setState((current) => ({ count: current.count + 1 }));
+};
+minus = () => {
+  this.setState((current) => ({ count: current.count - 1 }));
+};
+```
+
+- current는 현재 state를 가리킴.
+- this.state.count 같은 방식보단 위와 같은 방식을 쓰는 게 좋음
