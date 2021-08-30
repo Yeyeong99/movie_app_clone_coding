@@ -40,6 +40,7 @@ export default App;
 - Food에 argument를 {} 없이 넘겨버리면 Component에 부여된 모든 Props을 객체의 형태로 반환함.
   - 이땐 예를 들어 괄호에 props라고 작성했으면 출력시엔 props.fav 이런 식으로 작성해야함.
 - Props 중에서 특정한 것만 출력하고 싶은 경우 {}를 사용해 직접 추출
+- 정적 데이터 관리
 
 ## 3. Dynamic Component Generation
 
@@ -70,3 +71,9 @@ Food.propTypes = {
 ```
 
 props의 데이터형과 필수인지를 설정할 수 있음
+
+## 5. State
+
+- 동적 데이터 관리
+- react는 자동적으로 class component의 render method를 실행
+- class <-> state
