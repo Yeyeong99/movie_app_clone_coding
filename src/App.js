@@ -14,6 +14,10 @@ const foodILike = [
   { name: "dkdk", id: 2 },
 ];
 
+function renderFood(dish) {
+  const { name, id } = dish;
+  return <Food name={name} id={id} key={id} />;
+}
 function App() {
   return (
     <div className="App">
@@ -21,9 +25,7 @@ function App() {
       <Food fav="kkkk" />
       <Food fav="what" />
       <Food fav="sleep tight" /> */}
-      {foodILike.map((dish) => (
-        <Food name={dish.name} id={dish.id} />
-      ))}
+      {foodILike.map(renderFood)}
     </div>
   );
 }
