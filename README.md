@@ -56,3 +56,17 @@ function App() {
 ```
 
 - map: array의 각 item에서 function을 실행하고 그 function의 result를 array로 반환해줌.
+
+## 4. PropTypes
+
+```javascript
+import PropTypes from "prop-types";
+
+Food.propTypes = {
+  name: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+  rating: PropTypes.number.isRequired,
+};
+```
+
+props의 데이터형과 필수인지를 설정할 수 있음
