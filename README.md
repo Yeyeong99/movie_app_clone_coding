@@ -102,3 +102,9 @@ minus = () => {
 
 - current는 현재 state를 가리킴.
 - this.state.count 같은 방식보단 위와 같은 방식을 쓰는 게 좋음
+
+## 6. Life Cycle method
+
+- react가 component를 생성 / 없애는 방법
+- constructor => render => componentDidMount
+- setState 호출시: component => render => componentDidUpdate
