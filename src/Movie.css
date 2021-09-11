@@ -1,32 +1,56 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
+html,
+body,
+.CarouselItem,
+.CarouselItem > div {
   height: 100%;
+  width: 100%;
 }
 
 body {
-  background-color: white;
+  background-color: rgb(36, 35, 35);
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
+  font-family: "Noto Sans", sans-serif;
 }
 
-.movies {
+li {
+  list-style-type: none;
+  padding: 0px 10px 0px 0px;
+}
+
+ul {
   display: flex;
+  margin: 20px 0px;
+}
+
+button {
+  position: absolute;
+}
+
+.CarouselItem > div {
+  display: flex;
+  justify-content: center;
 }
 
 .movies_movie {
   width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: Noto-sans, sans-serif;
   margin: 30px;
+}
+
+.movies_movie > img {
+  margin: 30px;
+}
+
+.movie_title {
+  margin: 10px 0px;
 }
