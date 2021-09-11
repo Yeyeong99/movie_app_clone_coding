@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import Movie from "./Movie";
+import Carousel from "react-material-ui-carousel";
 import "./App.css";
 
 class App extends React.Component {
@@ -30,7 +31,11 @@ class App extends React.Component {
             <span className="loader_text">Loading...</span>
           </div>
         ) : (
-          <div className="movies">
+          <Carousel
+            className="movies"
+            autoPlay={false}
+            navButtonsAlwaysVisible={true}
+          >
             {movies.map((movie) => (
               <Movie
                 key={movie.id}
@@ -42,7 +47,7 @@ class App extends React.Component {
                 poster={movie.medium_cover_image}
               />
             ))}
-          </div>
+          </Carousel>
         )}
       </section>
     );
